@@ -1,12 +1,22 @@
-# CVE
+<p align="center">
+<a href="https://www.npmjs.com/package/cvep"><img src="https://img.shields.io/npm/v/cvep.svg" alt="npm package"></a>
+</p>
+
+# CVEP
 
 ### Create the Electron project based on the next generation development server vite and vue3.
+
+- 💡 Quickly create a project
+- ⚡️ Lightning Fast HMR
+- 🛠️ Dev&&Build
+- 📦 No configuration
+
 
 > Project use vite2.0,vue3, and the latest electron.Additional items to be added such as ElementPlus, Vuex, etc.
 >
 > **Compatibility Note:** Vite requires [Node.js](https://nodejs.org/en/) version >=12.0.0.
 
-#### >Use
+## >Use
 
 With NPM:
 
@@ -39,7 +49,7 @@ cvep <projectName> -<arg>
 
 At this point the project is created！
 
-#### >Dev And Build
+## >Dev And Build
 
 Use ViteConfig to build and develop the VUE !!!
 
