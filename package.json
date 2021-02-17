@@ -13,10 +13,10 @@
     "build"
   ],
   "description": "Create the Electron project based on the next generation development server vite and vue3.",
-  "homepage": "https://github.com/wwog/cve",
-  "repository": "wwog/cve",
+  "homepage": "https://github.com/wwog/cvep",
+  "repository": "wwog/cvep",
   "bugs": {
-    "url": "https://github.com/wwog/cve/issues"
+    "url": "https://github.com/wwog/cvep/issues"
   },
   "bin": {
     "cvep": "bin/create-vite-electron.js"
