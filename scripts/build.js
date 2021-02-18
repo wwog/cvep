@@ -17,7 +17,7 @@ function buildProjectScript() {
       'esbuild'
     ],
     outfile: templateJs,
-    minify: true
+    minify: false
   })
   if (result.warnings.length === 0) {
     fs.copyFileSync(templateJs, templateJs.replace('-js', '-ts'))

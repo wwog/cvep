@@ -65,6 +65,10 @@ async function init() {
     choices: ADDITEMS
   })
   project.addItem(addItems)
+  console.log(`   Project created `)
+  console.log(`   cd ${projectName}\n   yarn`)
 }
 
-init().catch(e => { console.log(e) })
+init().then(value => {
+  
+}).catch(e => { console.log(e) })

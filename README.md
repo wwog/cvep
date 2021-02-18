@@ -6,15 +6,17 @@
 
 ### Create the Electron project based on the next generation development server vite and vue3.
 
-- 💡 Quickly create a project
-- ⚡️ Lightning Fast HMR
-- 🛠️ Dev&&Build
-- 📦 No configuration
-
 
 > Project use vite2.0,vue3, and the latest electron.Additional items to be added such as ElementPlus, Vuex, etc.
 >
 > **Compatibility Note:** Vite requires [Node.js](https://nodejs.org/en/) version >=12.0.0.
+
+
+- ⏱ Quickly create a project
+- ⚡️ Lightning Fast HMR
+- 🛠️ Dev&&Build
+- 📦 No configuration
+
 
 ## >Use
 

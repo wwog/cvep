@@ -1,6 +1,6 @@
 {
   "name": "cvep",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "wwog",
   "license": "MIT",
   "keywords": [
@@ -22,6 +22,7 @@
     "cvep": "bin/create-vite-electron.js"
   },
   "files": [
+    "bin",
     "dist",
     "template-js",
     "template-ts"

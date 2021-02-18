@@ -54,11 +54,11 @@ export class Build extends Base {
     if (!pkg.main) {
       pkg.main = '__entry.js'
     }
-    let electronVersion = pkg.dependencies.electron.replace("^", "");
+    let electronVersion = pkg.devDependencies.electron.replace("^", "");
     delete pkg.scripts;
     delete pkg.dependencies;
     delete pkg.devDependencies;
-    pkg.dependencies = { electron: electronVersion };
+    pkg.devDependencies = { electron: electronVersion };
     writeFileSync(
       join(this.outDir, "package.json"),
       JSON.stringify(pkg, null, 2),
