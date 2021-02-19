@@ -29,11 +29,16 @@ export class Base {
     if (pkg.main) {
       this.mainEntrySrc = join(this.root, pkg.main)
     } else {
+      let isFind = false
       for (const file of fs.readdirSync(this.main)) {
         if (file.startsWith('entry')) {
+          isFind = true;
           this.mainEntrySrc = join(this.main, file)
           break
         }
+      }
+      if(!isFind){
+        console.error(new Error(`not find electron mainProcess Entry file!!!`))
       }
     }
     //outDir,vite默认为dist

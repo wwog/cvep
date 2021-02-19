@@ -51,11 +51,16 @@ var Base = class {
     if (pkg.main) {
       this.mainEntrySrc = import_path.join(this.root, pkg.main);
     } else {
+      let isFind = false;
       for (const file of fs.readdirSync(this.main)) {
         if (file.startsWith("entry")) {
+          isFind = true;
           this.mainEntrySrc = import_path.join(this.main, file);
           break;
         }
+      }
+      if (!isFind) {
+        console.error(new Error(`not find electron mainProcess Entry file!!!`));
       }
     }
     const viteConfig = await import_vite.resolveConfig({}, "build");
@@ -184,7 +189,7 @@ var Build = class extends Base {
     await import_vite3.build();
   }
   getMIRROR() {
-    let ELECTRON_MIRROR = "";
+    let ELECTRON_MIRROR;
     let npmrc = import_path2.join(this.root, ".npmrc");
     if (import_fs2.existsSync(npmrc)) {
       ELECTRON_MIRROR = import_fs2.readFileSync(npmrc).toString();

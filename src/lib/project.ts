@@ -9,6 +9,9 @@ export class Project {
   protected packagePath: string;
   protected createAppDir = path.join(__dirname, '../../node_modules', '@vitejs/create-app')
   protected templateDir = '';
+  static ADDITEMS = [
+    'npmrc',
+  ]
   constructor(public projectName: string) {
     this.root = join(cwd, projectName)
     this.packagePath = join(this.root, 'package.json')
@@ -56,7 +59,7 @@ export class Project {
   addItem(itemArr: string[]) {
     for (const item of itemArr) {
       //@ts-ignore
-      if (this[item] != '') {
+      if (this[item]) {
         //@ts-ignore
         this[item]()
       }

@@ -11,7 +11,7 @@ export class Build extends Base {
   }
   private getMIRROR() {
     //npmrc  ELECTRON_MIRROR
-    let ELECTRON_MIRROR = ''
+    let ELECTRON_MIRROR
     let npmrc = join(this.root, '.npmrc')
     if (existsSync(npmrc)) {
       ELECTRON_MIRROR = readFileSync(npmrc).toString()

@@ -2,6 +2,7 @@ import { Project } from "./lib/project";
 import { prompt } from "enquirer"
 import * as parseArgv from "minimist"
 import * as fs from 'fs'
+
 import { emptyDir } from './lib/utils'
 let argv = parseArgv.default(process.argv.slice(2), {
   alias: {
@@ -13,9 +14,7 @@ const TEMPLATES = [
   'ts',
   'js',
 ]
-const ADDITEMS = [
-  'npmrc',
-]
+
 async function init() {
   let projectName = argv._[0]
   if (!projectName) {
@@ -62,11 +61,10 @@ async function init() {
     name: 'addItems',
     message: 'Select addItems:',
     initial: 0,
-    choices: ADDITEMS
+    choices: Project.ADDITEMS
   })
   project.addItem(addItems)
-  console.log(`   Project created `)
-  console.log(`   cd ${projectName}\n   yarn`)
+  console.log(`\n\n      cd ${projectName}\n      yarn\n`)
 }
 
 init().then(value => {
